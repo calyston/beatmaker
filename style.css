@@ -31,8 +31,20 @@ i, svg {
   background-color: orange;
 }
 
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .hihat-track, .snare-track, .kick-track {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 70%;
 }
 
 .hihat, .snare, .kick {
