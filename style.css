@@ -38,7 +38,7 @@ i, svg {
   transition: all 0.3s ease;
 }
 
-.kick-pad:active, .snare-pad:active, .hihat-pad:active {
+.kick-pad.active, .snare-pad.active, .hihat-pad.active {
   opacity: 1;
 }
 
