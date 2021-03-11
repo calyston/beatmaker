@@ -48,7 +48,15 @@ class DrumKit {
       clearInterval(this.isPlaying);
       this.isPlaying = null;
     }
-
+  }
+  updateButton() {
+    if (!this.isPlaying) {
+      this.playButton.innerText = "Stop";
+      this.playButton.classList.add('active');
+    } else {
+      this.playButton.innerText = "Play";
+      this.playButton.classList.remove('active');
+    }
   }
 }
 
@@ -63,5 +71,6 @@ drumKit.pads.forEach(pad => {
 
 //Play Button
 drumKit.playButton.addEventListener('click', function () {
+  drumKit.updateButton();
   drumKit.start();
 });
