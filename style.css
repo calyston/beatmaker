@@ -77,6 +77,10 @@ i, svg {
   transition: all 0.3s ease;
 }
 
+.mute.active {
+  background-color: grey;
+}
+
 .play {
   display: flex;
   margin: 2rem auto;
@@ -91,6 +95,8 @@ select {
   padding: 1rem;
   font-size: 1rem;
 }
+
+
 
 @keyframes playTrack {
   from {
