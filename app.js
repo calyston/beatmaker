@@ -13,7 +13,11 @@ class DrumKit {
   }
   repeat() {
     let step = this.index % 8;
-    const activeBars = document.querySelectorAll('.b${step}');
+    const activeBars = document.querySelectorAll(`.b${step}`);
+    //Loop over the pads
+    activeBars.forEach(bar => {
+      bar.style.animation = `playTrack 0.3s alternate ease-in-out`;
+    });
     this.index++;
   }
   start() {
