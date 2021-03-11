@@ -7,6 +7,7 @@ class DrumKit {
     this.index = 0;
     this.bpm = 150;
     this.playButton = document.querySelector('.play');
+    this.isPlaying = null;
   }
   activePad() {
     this.classList.toggle('active');
@@ -19,14 +20,17 @@ class DrumKit {
       bar.style.animation = `playTrack 0.3s alternate ease-in-out 2`;
       //Check if pads are active
       if (bar.classList.contains('active')) {
-        //Check each sound
+        //Check which pads are active
         if (bar.classList.contains('kick-pad')) {
+          this.kickAudio.currentTime = 0;
           this.kickAudio.play();
         }
         if (bar.classList.contains('snare-pad')) {
+          this.snareAudio.currentTime = 0;
           this.snareAudio.play();
         }
         if (bar.classList.contains('hihat-pad')) {
+          this.hihatAudio.currentTime = 0;
           this.hihatAudio.play();
         }
       }
@@ -35,9 +39,16 @@ class DrumKit {
   }
   start() {
     const interval = (60 / this.bpm) * 1000;
-    setInterval(() => {
-      this.repeat();
-    }, interval);
+    //Check if it is playing
+    if (!this.isPlaying) {
+      this.isPlaying = setInterval(() => {
+        this.repeat();
+      }, interval);
+    } else {
+      clearInterval(this.isPlaying);
+      this.isPlaying = null;
+    }
+
   }
 }
 
@@ -50,6 +61,7 @@ drumKit.pads.forEach(pad => {
   })
 })
 
+//Play Button
 drumKit.playButton.addEventListener('click', function () {
   drumKit.start();
 });
