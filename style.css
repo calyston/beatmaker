@@ -83,12 +83,21 @@ i, svg {
 
 .play {
   display: flex;
+  justify-content: center;
+  width: 8rem;
   margin: 2rem auto;
   padding: 1rem 2rem;
   font-size: 1.5rem;
-  background-color: lightgrey;
+  background-color: lime;
   border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem limegreen;
   cursor: pointer;
+}
+
+.play.active {
+  background-color: red;
+  box-shadow: 0.2rem 0.2rem 0.2rem darkred;
 }
 
 .tempo {
