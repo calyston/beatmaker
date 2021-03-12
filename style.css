@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: ghostwhite;
 }
 
 i, svg {
@@ -35,6 +36,8 @@ i, svg {
 }
 
 .pad {
+  border-radius: 0.5rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem grey;
   transition: all 0.3s ease;
 }
 
