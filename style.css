@@ -91,6 +91,29 @@ i, svg {
   cursor: pointer;
 }
 
+.tempo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.tempo-slider {
+  width: 50%;
+  padding: 0.1rem;
+  -webkit-appearance: none;
+  margin: 1rem 0rem;
+  background-color: lightgrey;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
 select {
   padding: 1rem;
   font-size: 1rem;
