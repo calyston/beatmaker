@@ -68,17 +68,20 @@ i, svg {
   margin: 0rem 2rem;
 }
 
-.controls button {
+.mute {
   padding: 1rem;
   border: none;
-  background-color: lightgrey;
+  border-radius: 0.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  background-color: gainsboro;
+  box-shadow: 0.2rem 0.2rem 0.2rem grey;
 }
 
 .mute.active {
-  background-color: grey;
+  background-color: black;
+  color: red;
 }
 
 .play {
@@ -93,6 +96,7 @@ i, svg {
   border-radius: 0.5rem;
   box-shadow: 0.2rem 0.2rem 0.2rem limegreen;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .play.active {
