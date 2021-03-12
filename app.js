@@ -82,6 +82,8 @@ class DrumKit {
   mute(e) {
     const muteIndex = e.target.getAttribute("data-track");
     e.target.classList.toggle('active');
+    e.target.children[0].classList.toggle('fa-volume-up');
+    e.target.children[0].classList.toggle('fa-volume-mute');
     if (e.target.classList.contains('active')) {
       switch (muteIndex) {
         case "0":
